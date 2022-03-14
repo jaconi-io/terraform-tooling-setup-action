@@ -42,6 +42,6 @@ runs:
         api-key: ${{ inputs.infracost_api_key }}
 
     - name: 'Setup Teller'
-      uses: spectralops/setup-teller@v1
+      uses: SpectralOps/setup-teller-action@v1
       with:
         teller-version: ${{inputs.teller_version}}
