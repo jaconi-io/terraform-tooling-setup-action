@@ -16,6 +16,10 @@ inputs:
   infracost_api_key:
     description: Infracost API key
     required: true
+  teller_version:
+    description: Teller version to install
+    required: false
+    default: '1.1.0'
 
 runs:
   using: "composite"
@@ -36,3 +40,8 @@ runs:
       with:
         version: ${{ inputs.infracost_version }}
         api-key: ${{ inputs.infracost_api_key }}
+
+    - name: 'Setup Teller'
+      uses: spectralops/setup-teller@v1
+      with:
+        teller-version: ${{inputs.teller_version}}
