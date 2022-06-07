@@ -19,7 +19,8 @@ inputs:
     default: '0.9'
   infracost_api_key:
     description: Infracost API key
-    required: true
+    required: false
+    default: ''
   teller_version:
     description: Teller version to install
     required: false
